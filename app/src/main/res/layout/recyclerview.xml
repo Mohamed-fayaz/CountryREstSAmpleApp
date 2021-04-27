@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="property"
+            type="com.example.countryrest.CountryProperty" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{property.name}"
+            android:textSize="50sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp"
+            tools:text="fjdljkljkljkl" />
+
+        <TextView
+            android:id="@+id/region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{property.region}"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:layout_editor_absoluteX="10dp"
+            tools:text="fjdljkljkljkl" />
+
+        <TextView
+            android:id="@+id/capital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{property.capital}"
+            app:layout_constraintTop_toBottomOf="@+id/region"
+            tools:layout_editor_absoluteX="16dp"
+            tools:text="fjdljkljkljkl" />
+
+        <TextView
+            android:id="@+id/population"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:setPopulation="@{property}"
+            app:layout_constraintTop_toBottomOf="@+id/capital"
+            tools:layout_editor_absoluteX="10dp"
+            tools:text="fjdljkljkljkl" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
